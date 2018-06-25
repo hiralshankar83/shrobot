@@ -1,0 +1,80 @@
+package com.sh.tr.toyrob.util;
+
+import com.sh.tr.toyrob.exception.TRException;
+import com.sh.tr.toyrob.model.Direction;
+
+/**
+ * Position of the robot
+ *
+ */
+public class Position {
+	private int x;
+    private int y;
+    Direction direction;
+
+    public Position(Position position) {
+        this.x = position.getX();
+        this.y = position.getY();
+        this.direction = position.getDirection();
+    }
+
+    public Position(int x, int y, Direction direction) {
+        this.x = x;
+        this.y = y;
+        this.direction = direction;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public int getY() {
+        return this.y;
+    }
+
+    public Direction getDirection() {
+        return this.direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    /**
+     * Change the direction of the robot
+     * @param x
+     * @param y
+     */
+    public void change(int x, int y) {
+        this.x = this.x + x;
+        this.y = this.y + y;
+    }
+
+    /**
+     * Getting the next position
+     * @return
+     * @throws TRException
+     */
+    public Position getNextPosition() throws TRException {
+        if (this.direction == null)
+            throw new TRException("Invalid robot direction");
+
+        // new position to validate
+        Position newPosition = new Position(this);
+        switch (this.direction) {
+            case NORTH:
+                newPosition.change(0, 1);
+                break;
+            case EAST:
+                newPosition.change(1, 0);
+                break;
+            case SOUTH:
+                newPosition.change(0, -1);
+                break;
+            case WEST:
+                newPosition.change(-1, 0);
+                break;
+        }
+        return newPosition;
+    }
+}

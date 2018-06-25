@@ -1,0 +1,10 @@
+com\sh\tr\toyrob\model\impl\SquareBoard.class
+com\sh\tr\toyrob\model\Command.class
+com\sh\tr\toyrob\model\Direction.class
+com\sh\tr\toyrob\util\ShRobot.class
+com\sh\tr\toyrob\util\Position.class
+com\sh\tr\toyrob\model\Board.class
+com\sh\tr\toyrob\Game.class
+com\sh\tr\toyrob\exception\TRException.class
+com\sh\tr\toyrob\Game$1.class
+com\sh\tr\toyrob\util\Position$1.class
