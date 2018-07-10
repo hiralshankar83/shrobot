@@ -6,6 +6,7 @@ import junit.framework.TestCase;
 import com.sh.tr.toyrob.model.Direction;
 
 
+@SuppressWarnings("deprecation")
 public class DirectionTest extends TestCase{
     public void testRotate() throws Exception {
         Direction direction = Direction.EAST;

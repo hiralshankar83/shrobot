@@ -7,6 +7,7 @@ import com.sh.tr.toyrob.model.Direction;
 import com.sh.tr.toyrob.util.Position;
 
 
+@SuppressWarnings("deprecation")
 public class PositionTest extends TestCase{
     public void testGetNextPosition() throws Exception {
         Position position = new Position(0, 0, Direction.EAST);

@@ -9,6 +9,7 @@ import junit.framework.TestCase;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@SuppressWarnings("deprecation")
 public class SquareBoardTest extends TestCase{
 
     public void testIsValidPosition() throws Exception {
